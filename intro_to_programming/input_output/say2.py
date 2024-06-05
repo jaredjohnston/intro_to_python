@@ -1,5 +1,5 @@
 def say(text):
-    print()
+    print(text)
 say("hello")
 say("hi")
 say("how are you?")
