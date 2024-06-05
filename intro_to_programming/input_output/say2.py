@@ -1,4 +1,4 @@
-def say():
+def say(text):
     print()
 say("hello")
 say("hi")
