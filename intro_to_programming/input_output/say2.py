@@ -1,6 +1,6 @@
-def say(text):
-    print(text)
+def say(text="howdy"):
+    print(text + "!")
+say()
 say("hello")
-say("hi")
 say("how are you?")
-say("I'm alright, thanks")
+say("I'm alright partner")
