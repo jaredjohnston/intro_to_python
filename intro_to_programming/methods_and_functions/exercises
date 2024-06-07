@@ -33,7 +33,7 @@ print(f"The numbers {first_number} and {second_number} multiply to {sum}")
 def multiply(left, right):
     return left * right
 
-def get_number(prompt)
+def get_number(prompt):
   entry = input(prompt)
   return float(entry)
 
