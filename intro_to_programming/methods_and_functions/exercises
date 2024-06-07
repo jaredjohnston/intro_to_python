@@ -1,0 +1,198 @@
+def set_foo():
+    foo = "bar"
+set_foo()
+print(foo) 
+
+# This will result in an error: 'foo' is not defined because it was created inside a function
+
+foo = 'bar'
+
+def set_foo():
+    foo = 'qux'
+
+set_foo()
+print(foo) 
+
+# Prints 'foo' because foo = 'qux' is defined locally within a function so line 10 doesn't change the value of foo from line 7.
+
+# The code below gets input from the user, multiples them and returns a sum
+
+print("Enter the first number ")
+first_number = input()
+print(f"First number is {first_number}")
+
+print("Enter the second number ")
+second_number = input()
+print(f"Second number is {second_number}")
+
+sum = float(first_number) * float(second_number)
+print(f"The numbers {first_number} and {second_number} multiply to {sum}")
+
+# Below is another, more elegant way of getting input and multiplying numbers
+
+def multiply(left, right):
+    return left * right
+
+def get_number(prompt)
+  entry = input(prompt)
+  return float(entry)
+
+first_number = get_number("Enter the first number: ")
+second_number = get_number("Enter the second number" )
+sum = multiply(first_number, second_number)
+print(f'{first_number} * {second_number} = {sum}')
+
+# Identify the all the moving parts in the code block below: 
+
+def multiply_numbers(num1, num2, num3): # function definition lines 43 - 45, function name, function parameters
+    result = num1 * num2 * num3 # function body, function arguments, local variable 
+    return result # function return value
+
+product = multiply_numbers(2, 3, 4) # function invocation, function name, function arguments
+
+def scream(words):
+    return words + '!!!!'
+
+scream('Yipeee') 
+
+# No output: does not print Yipeee!!!!
+
+def scream(words):
+    words = words + '!!!!'
+    return
+    print(words)
+
+scream('Yipeee') 
+
+# No output: does not print anything because function returns before print command
+
+def foo(bar, qux):
+    print(bar)
+    print(qux)
+
+foo('Hello') 
+
+# Error: foo() missing 1 required positional argument: 'qux'
+
+def foo(bar, qux):
+    print(bar)
+    print(qux)
+
+foo(42, 3.141592, 2.718) 
+
+#Error: Too many arguments 'foo' defined with only two parameters
+
+def foo(first, second=3, third=2):
+    print(first)
+    print(second)
+    print(third)
+
+foo(42, 3.141592, 2.718) 
+
+# Returms 42, 3.141592, 2.718
+
+def foo(first, second=3, third=2):
+    print(first)
+    print(second)
+    print(third)
+
+foo(42) 
+
+# Returns 42, 3, 2
+
+def foo(first, second=3, third=2):
+    print(first)
+    print(second)
+    print(third)
+
+foo() 
+
+# Error: foo() missing 1 required positional argument 'first'. Too few arguments
+
+def foo(first, second=3, third):
+    print(first)
+    print(second)
+    print(third)
+
+foo(42) 
+
+# Error: all parameters subsequent to a default value must also have a default value
+
+# Identify all the identifiers in the code below:
+
+def multiply(left, right): # multiply, left, right
+    return left * right # left, right
+
+def get_num(prompt): # get_num, prompt
+    return float(input(prompt)) #float, prompt, input
+
+first_number = get_num('Enter the first number: ') # first_number, get_num
+second_number = get_num('Enter the second number: ') # second_number, get_num
+product = multiply(first_number, second_number) # product, multiply, first_number, second_number
+print(f'{first_number} * {second_number} = {product}') # print, first_number, second_number, product
+
+# Classify all the identifiers below as global, local or built-in.
+
+def multiply(left, right): # multiply (global), left (local), right (local)
+    return left * right # left (local), right (local)
+
+def get_num(prompt): # get_num (global), prompt (local)
+    return float(input(prompt)) # input (built-in), prompt (local), float (built-in)
+
+first_number = get_num('Enter the first number: ') # first_number (global), get_num (global)
+second_number = get_num('Enter the second number: ') # second_number (global), get_num (global)
+product = multiply(first_number, second_number) # product (global), multiply (global), first_number (global), second_number (global)
+print(f'{first_number} * {second_number} = {product}') # print (built-in), first_number (global), second_number (global), product (global)
+
+# Identify all the function names and parameters in the code below:
+
+def multiply(left, right): # multiply (function), left (parameter), right (parameter)
+    return left * right # left (local variable), right (local variable)
+
+def get_num(prompt): # get_num (function), prompt (parameter)
+    return float(input(prompt)) # float (function, built-in), input (function, built-in), prompt (local variable)
+
+first_number = get_num('Enter the first number: ')
+second_number = get_num('Enter the second number: ')
+product = multiply(first_number, second_number)
+print(f'{first_number} * {second_number} = {product}') # print (function)
+
+# Identify the built-in functions, function names and method names in the code below:
+
+def say(message): # say (function), message (parameter)
+    print(f'==> {message}') # print (function, built-in), message (local variable)
+
+string1 = input() # input (function, built-in), string1 (object)
+string2 = input() # input (function, built-in), string2 (object)
+
+say(max(string1.upper(), string2.lower())) # say (function), max (function, built-in), upper. (method), lower. (method)
+
+# The code below should check if the following lists contain at least one number not divisible by 3.
+
+def remainder_3(numbers):
+    return [number % 3 for number in numbers]
+
+numbers_1 = [0, 1, 2, 3, 4, 5, 6]
+numbers_2 = [1, 2, 4, 5]
+numbers_3 = [0, 3, 6]
+numbers_4 = []
+
+print(any(remainder_3(numbers_1)))
+print(any(remainder_3(numbers_2)))
+print(any(remainder_3(numbers_3)))
+print(any(remainder_3(numbers_4)))
+
+# The code below should check if the following lists do not contain any numbers divisible by 5.
+
+def remainder_5(numbers):
+    return [number % 5 for number in numbers]
+
+numbers_1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers_2 = [1, 2, 3, 4, 6, 7, 8, 9]
+numbers_3 = [0, 5, 10]
+numbers_4 = []
+
+print(all(remainder_5(numbers_1)))
+print(all(remainder_5(numbers_2)))
+print(all(remainder_5(numbers_3)))
+print(all(remainder_5(numbers_4)))
