@@ -1,0 +1,64 @@
+False or (True and False) # False
+True or (1 + 2) # True
+(1 + 2) or True # 3
+True and (1 + 2) # 3
+False and (1 + 2) # False
+(1 + 2) and True # True
+(32 * 4) >= 129 # False
+False != (not True) # False
+True == 4 # False
+False == (847 == '847') # True
+
+def even_or_odd(): # define a function with no parameters
+  number = int(input("Enter your number: ")) # local variable = input()
+  print("even" if number % 2 == 0 else "odd") # print "even" or "odd" using ternary expression
+
+def bar_code_scanner(serial):
+    match serial:
+        case '123':
+            print('Product1')
+        case '113':
+            print('Product2')
+        case '142':
+            print('Product3')
+        case _:
+            print('Product not found!')
+
+bar_code_scanner('113') # Product2
+bar_code_scanner(142) # Product not found!
+
+def some_function():
+  if foo():
+    return 'bar'
+  else:
+    return qux()
+  
+def is_list_empty(my_list):
+    if my_list:
+        print('Not Empty')
+    else:
+        print('Empty')
+
+is_list_empty([]) # List is Empty and line 2 is falsy so else statement runs
+
+my_string = input("Type some text ")
+
+def caps_long():
+   num_characters = len(my_string)
+
+   if num_characters > 10:
+      return my_string.upper()
+   else:
+      return my_string
+
+value = int(input())
+
+def number_range():
+   if value < 0: 
+      print (f"{value} is less than 0")
+   elif value <= 50:
+    print(f"{value} is between 0 and 50")
+   elif value <= 100:
+    print(f"{value} is between 51 and 100")
+   else:
+      print (f"{value} is more than 100")
