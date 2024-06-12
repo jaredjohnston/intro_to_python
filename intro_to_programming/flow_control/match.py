@@ -1,6 +1,6 @@
 value = 5
 
-match value
+match value:
     case 5:
         print('value is 5')
     case 6:
@@ -8,5 +8,3 @@ match value
     case _: #default case
         print('value is neither 5 nor 6')
 # value is 5
-
-value = 5
