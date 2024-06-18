@@ -1,0 +1,174 @@
+# Print the seventh number of range(0, 25, 3)
+
+sequence = range(0,25, 3)
+seventh = sequence[7]
+print(seventh)
+
+# Another simpler way to do it...
+
+my_range = (0, 25, 3)
+print(my_range[7])
+
+# Print a 6-character substring of 'Launch School' that begins with the first 'c'
+
+my_school = 'Launch School'
+print(my_school[4:10])
+
+# Reverse the order of my_tuple and remove the first and last elements
+
+my_tuple = (1, 2, 3, 4, 5)
+
+my_list = list(my_tuple)
+my_list.remove(1)
+my_list.remove(5)
+
+for my_list in reversed(my_list):
+    print(my_list)
+
+# Another simpler way to do it...
+
+my_tuple = (1, 2, 3, 4, 5)
+
+my_list = list(my_tuple)
+my_list.reverse()
+print(my_list[1:4])
+
+# Write code that prints 'Bark' when 'Dog' key is accessed
+
+pets = {
+    'Cat':  'Meow',
+    'Dog':  'Bark',
+    'Bird': 'Tweet',
+}
+print(pets['Dog']) # prints 'Bark'
+
+# Write code that prints 'None' if you try to print a value with a non-existent key
+
+print(pets.get('Lizard'))
+
+# Write code that prints < silence > if you try to print a value with a non-existent key
+print(pets.get('Lixard', ' ... '))
+
+# Which of these values cannot be used a 'key' in a dict?
+
+'cat' # Yes
+(3, 1, 4, 1, 5, 9, 2) # Yes
+['a', 'b'] # No
+{'a': 1, 'b': 2} # No, this is key-value pair not a 'key'
+range(5) # Yes
+{1, 4, 9, 16, 25} # No
+3 # Yes
+0.0 # Yes
+frozenset({1, 4, 9, 16, 25}) # Yes
+
+# What will the following print? 
+
+print('abc-def'.isalpha()) # False. '-' is not alphabetic
+print('abc_def'.isalpha()) # False. '_' is not alphabetic
+print('abc def'.isalpha()) # False. ' ' is not alphabetic
+print('abc def'.isalpha() and
+      'abc def'.isspace()) # False. A string cannot be both alphabetic or whitespace
+print('abc def'.isalpha() or
+      'abc def'.isspace()) # False. Ditto above
+print('abcdef'.isalpha()) # True
+print('31415'.isdigit()) # True
+print('-31415'.isdigit()) # False. '-' is not a digit
+print('31_415'.isdigit()) # False. '_' is not a digit
+print('3.1415'.isdigit()) # False. '.' is not a digit
+print(''.isspace()) # False. Empty string 
+
+# Replace all ':' characters with '+'
+
+info = 'xyz:*:42:42:Lee Kim:/home/xyz:/bin/zsh'
+parts = info.split(':') # splits the string into list of substrings using ':' as the delimiter saved to parts variable. ['xyz', '*', '42', '441', 'Lee Kim', '/home/xyz', '/bin/zsh']
+result = '+'.join(parts) # concatenate the elements of the list 'parts' into a single string with each element separared by '+'
+print(result)
+
+# Explain why the code below prints different values
+
+text = "It's probably pining for the fjords!"
+
+print(text[21:35].rfind('f'))     # 8. Created a new range "slice" (21:35) then searched for rightmost instance of 'f' starting from index 0. 
+print(text.rfind('f', 21, 35))    # 29. Did not create a range but searched string from 21:35 for rightmost instance of 'f' which is index 29 in the whole string.
+
+# Replace the value 6 in the following nested list with 606
+
+stuff = [
+    ['hello', 'world'],
+    ['example', 'mem', None, 6, 88],
+    [4, 8, 12],
+]
+
+# Replace the 6 value in the following nested list with 606
+
+stuff = [
+    ['hello', 'world'],
+    ['example', 'mem', None, 6, 88],
+    [4, 8, 12],
+]
+
+stuff[1][3] = 606
+
+# Print all the activities Cocoa enjoys
+
+cats = {
+    'Pete': {
+        'Cheddar': {
+            'color': 'orange',
+            'enjoys': {
+                'sleeping',
+                'snuggling',
+                'meowing',
+                'eating',
+                'birdwatching',
+            },
+        },
+        'Cocoa': {
+            'color': 'black',
+            'enjoys': {
+                'eating',
+                'sleeping',
+                'playing',
+                'chewing',
+            },
+        },
+    },
+}
+
+print(cats['Pete']['Cocoa']['enjoys'])
+
+# What should each line print? 
+
+print('johnson' in 'Joe Johnson') # False. Case-sensitive
+print('sen' not in 'Joe Johnson') # True. 
+print('Joe J' in 'Joe Johnson') # True
+print(5 in range(5)) # False. 1, 2, 3, 4
+print(5 in range(6)) # True. 1, 2, 3, 4, 5
+print(5 not in range(5, 10)) # False. 5, 6, 7, 8, 9
+print(0 in range(10, 0, -1)) # False 10 - 1 so no 0
+print(4 in {6, 5, 4, 3, 2, 1}) # True
+print({1, 2, 3} in {1, 2, 3}) # False. With sets, only checks with specific value is in set
+print({3, 2} in {1, frozenset({2, 3})}) # True. Set {3, 2} and frozenset({2,3}) are equal
+
+# Write code that determines and prints whether 3 appears in each list
+
+numbers1 = [1, 3, 5, 7, 9, 11]
+numbers2 = []
+numbers3 = [2, 4, 6, 8]
+numbers4 = ['1', '3', '5']
+numbers5 = ['1', 3.0, '5']
+
+print(3 in numbers1) # True
+print(3 in numbers2) # False
+print(3 in numbers3) # False
+print(3 in numbers4) # False. '3' not equal to 3
+print(3 in numbers5) # True. 3.0 is equal to 3
+
+# What will each print statement print?
+
+cats = ('Cocoa', 'Cheddar',
+        'Pudding', 'Butterscotch')
+print('Butterscotch' in cats) # True
+print('Butter' in cats) # False. String in wider list must match list element exactly
+print('Butter' in cats[3]) # True. 'Butter' is in 'Butterscotch'
+print('cheddar' in cats) # False. Case-sensitive
