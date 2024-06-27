@@ -1,0 +1,16 @@
+'Aloha, World!'.lower() # 'aloha, world!'
+
+text = 'Aloha, World!'
+
+left_justified_ljust = text.ljust(10)
+print(f"Using ljust: '{left_justified_ljust}'")
+
+text = 'hello'
+reversed_text = s[::-1]
+print(reversed_text)
+# olleh 
+
+['fish', 'and', 'chips'][1]
+my_dish = ['fish', 'and', 'chips']
+print(my_dish[1])
+
