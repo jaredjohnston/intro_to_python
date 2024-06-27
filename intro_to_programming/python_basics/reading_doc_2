@@ -1,0 +1,71 @@
+name = "Victor"
+profession = "programmer"
+
+print(f"Hello, {name}. You are a {profession}")
+# using f-strings 
+
+message_format = "Hello, {}. You are a {}."
+formatted_message = message_format.format(name, profession)
+print(formatted_message)
+# using str.format
+
+ice_cream_density = 10
+
+while ice_cream_density > 0: 
+    print('Drip...')
+    ice_cream_density -= 1 
+
+print('The ice cream melted.')
+
+(4 * 5) + ((3**2) / 10)
+# 3**2 => 9
+# 4 * 5 => 20
+# 9 / 10 => 0.9
+# 20 + 0.9 = 20.9
+
+# look at Python's operator precedence. ** is evaluated first then multiplication and division, etc. 
+# nested parentheses tell Python explicitly to evaluate those expressions before the parenthesised expressions they are contained in.
+
+import datetime # imports module
+
+datetime_now = datetime.datetime.now() # datetime.datetime.now method returns current local date and time
+print(datetime_now)
+
+from datetime import datetime # shorter / more readable way. Imports the module and then the class within that module. This avoids having to prefix the module's name each time.
+
+current_datetime = datetime.now()
+print(current_datetime)
+
+from datetime import date
+
+today = date.today() # returns current local date 
+
+today_year = today.year # simply returns the year of today's date
+iso_year = today.isocalendar()[10] # returns named tuple with components: ISO year, ISO week, ISO weekday
+
+separator = '-'
+names = ['Jared', 'Hannah', 'Paul']
+result = separator.join(names)
+print(result) #Jared-Hannah-Paul
+
+my_string = 'Python'
+print(my_string.find('Py')) # 0
+
+my_string = 'Python'
+print('Py' in my_string) # True
+
+speed_limit = 60 
+current_speed = 80
+
+if current_speed > speed_limit: # added missing : to fix syntax error
+    print("""People are so bad at driving cars that 
+          computers don't have to be that good to be 
+          much better.""")
+
+
+tweet = 'Woohoo! :-)'
+
+if len(tweet) > 140:
+    print('Tweet is too long!')
+
+length_of_tweet = len(tweet + 5) # TypeError: you cannot concatenate an integer with a string. Function applied to an object of inappropriate type.
