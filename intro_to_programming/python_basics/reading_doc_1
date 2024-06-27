@@ -6,11 +6,33 @@ left_justified_ljust = text.ljust(10)
 print(f"Using ljust: '{left_justified_ljust}'")
 
 text = 'hello'
-reversed_text = s[::-1]
+reversed_text = text[::-1]
 print(reversed_text)
 # olleh 
 
 ['fish', 'and', 'chips'][1]
 my_dish = ['fish', 'and', 'chips']
 print(my_dish[1])
+# and
 
+['fish', 'and', 'chips'][10]
+# IndexError: list index out of range
+
+fruits = ["apple", "banana", "cherry", "peach", "watermelon"]
+
+index_cherry = fruits.index("cherry")
+print(f"The index of 'cherry' is: {index_cherry}")
+
+# it is best practice to check whether the value is in the list before finding its index
+if "cherry" in fruits: 
+    print("Yes, 'cherry' is in the list")
+else:
+    print("No, 'cherry' is not in the list")
+
+1_987_654_321
+# you can use underscores to group numbers and make big numbers easier to read 
+
+print(type(23.5))
+# <class 'float'>
+print(type('Call me Saul'))
+# <class 'str'>
