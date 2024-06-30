@@ -1,0 +1,76 @@
+for num in range(0, 11, 2):
+    print(num) 
+# 0 2 4 6 8 10
+
+for i in range(10, 0, -1):
+    print(i)
+print("Launch!")
+# 10 9 8 7 6 5 4 3 2 1 Launch!
+
+greeting = "Aloha!"
+
+counter = 1
+
+while counter < 4:
+    print(greeting)
+    counter += 1
+# Aloha! 
+# Aloha!
+# Aloha!
+
+greeting = "Aloha!"
+
+for _ in range(3): # the _ is a common convention when you're not using the variable in the loop body
+    print(greeting)
+# Aloha!
+# Aloha!
+# Aloha! 
+
+for num in range(1, 101):
+    print(num * 2)
+
+my_list = [1, 3, 7, 15]
+index = 0 
+
+while index < len(my_list):
+    index_list = my_list[index]
+    print(index_list)
+    index += 1
+# my way of doing it
+
+while index < len(my_list):
+    print(list[index])
+    index += 1
+# a simpler way of doing it
+
+friends = ['Sarah', 'John', 'Hannah', 'Dave']
+
+for friend in friends:
+    print(f'Hello, {friend}!')
+
+cities = ['Istanbul', 'Los Angeles', 'Tokyo', None,
+          'Vienna', None, 'London', 'Beijing', None]
+
+for city in cities:
+    if cities == None:
+        continue
+
+    print(len(city))
+
+while True:
+    print("and so on")
+    break 
+
+fish_list = ['Dory', 'Marlin', 'Gill', 'Nemo', 'Bruce']
+
+for fish in fish_list:
+    print(fish)
+    if fish == 'Nemo':
+      break
+
+while True:
+    print('Should I stop looping?')
+    answer = input()
+    if answer == 'Yes':
+      break
+    print('Incorrect. Please answer "Yes"')
