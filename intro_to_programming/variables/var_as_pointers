@@ -1,0 +1,31 @@
+numbers = [1, 2, 3]
+
+numbers2 = numbers 
+
+print(numbers == numbers2) # True
+print(numbers is numbers2) # True
+
+print(id(numbers)) # 4344278784
+print(id(numbers2)) # 4344278784
+print(id(numbers)) == (id(numbers2)) # True
+
+numbers_1 = [1, 2, 3]
+numbers_2 = [1, 2, 3]
+
+print(numbers_1 == numbers_2) # True
+print(numbers_1 is numbers_2) # False
+
+import copy 
+
+orig = [[1, 2], 3, 4]
+dup = copy.copy(orig)
+
+print(orig is dup) # False. Created new object dup
+print(orig == dup) # True
+orig[2] = 44
+print(dup) # [[1,2]3, 4]
+
+print(orig[0] is dup[0]) # True. Both objects ref same nested objects
+orig[0][2] = 22
+print(dup[0]) # [1, 22]
+
