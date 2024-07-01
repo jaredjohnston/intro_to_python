@@ -1,0 +1,112 @@
+if True:
+    my_value = 20
+
+print(my_value)
+
+# prints 20. If is a truthy value so variables initialised inside the block (if statement) can be accessed outside the block.
+
+if True:
+    my_value = 20
+
+print(my_value)
+
+# NameError. Variable remains undefined because condition was False, and therefore, block did not run.
+
+x = 10
+
+def my_function():
+    x = x + 5
+    print(x)
+
+my_function()
+
+# Error. Python assumes x is a local variable because we are assigning it inside a function. 
+# However, it is uninitialised so returns an error. To modify the global variable x, you must use global keyword.
+
+x = 10
+
+def my_function():
+    global x 
+    x = x + 5
+    print(x)
+
+my_function()
+
+def my_function():
+    a = 1
+
+    if True: 
+      print(a)
+
+my_function()
+
+# Variables initialised in the same scope where block begins can be accessed inside the block.
+
+a = 1
+
+def my_function():
+    print(a)
+
+my_function()
+
+# Top-level variable 'a' is initialised with the value 1. Global variables is accessible throughout the programme, including within the body of my_function. When my_function is invoked, prints 1. 
+
+a = 1
+
+def my_function():
+    print(a)
+    a = 2
+
+my_function()
+
+# LocalError. 'a' is being defined with my_function and treats it as a local variable. However, when you try to print 'a' before you assigned it a value, it returns an error.
+
+a = 1
+
+def my_function():
+    a = 2
+
+my_function
+print(a)
+
+# prints 1. Local variable inside the function has no impact on the global variable. Calling print(a) after invoking my_function will refer to global variable which still has value 1.
+
+a = 1 
+
+def my_function():
+    global a
+    a = 2
+
+my_function()
+print(a)
+
+# prints 2
+
+print(greeting)
+
+greeting = 'Hello, World'
+
+# NameError: name 'greeting' is not defined
+
+a = 7
+
+def my_function():
+    b += 10
+
+my_function(a)
+print(a)
+
+# prints 7. When my_function is called with 'a' as an argument, the local variable 'b' is set to reference the same value as 'a', which is 7. 
+# The =+ operation effectively becomes b = b + 10. This creates a new integer object 17 and updates 'b' to reference this new object. 
+# However, global variable 'a' remains unchanged.
+
+b = [1, 2, 3]
+
+def my_function():
+    b[0] = 10
+
+my_function()
+print(b)
+
+# prints [10, 2, 3]. Lists are mutable objects which can be modified within a function, affecting the original list in the global scope.
+# 'b' is not initialised as a local variable within my_function() but directly references b from the global scope so b[0] = 10 impacts the global variable.
