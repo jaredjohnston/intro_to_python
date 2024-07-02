@@ -1,0 +1,31 @@
+planets = ['Earth', 'Saturn', 'Mars']
+
+def first_element(planets):
+  if planets: # Python first checks if the list is non-empty, if the condition is True (e.g., is not empty), block below is executed. If you access index 0 of an empty list, an IndexError will occur.
+    return planets[0]
+  else: # if condition is False (e.g., list is not non-empty), then block below is executed
+    return None
+
+print(first_element(planets)) # Earth
+
+
+planets = ['Earth', 'Saturn', 'Mars']
+
+def last_element(planets):
+  if planets:
+    return planets[-1]
+  else:
+    return None
+  
+print(last_element(planets)) # Mars
+
+
+energy = ['fossil', 'solar', 'wind', 'nuclear', 'gas']
+
+energy.remove('fossil')
+# del energy[0] e.g., using the del statement
+energy.append('hydropower') # e.g., using the .append method 
+# energy.insert(0, 'hydropower') e.g., beginning of list
+# energy.insert(len(energy), 'hydropower') e.g., calculates length of the list and inserts 'hydropower' at that position / the end of list
+
+print(energy) # ['solar', 'wind', 'nuclear', 'gas', 'hydropower']
