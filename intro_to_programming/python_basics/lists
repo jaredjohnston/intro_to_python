@@ -25,7 +25,101 @@ energy = ['fossil', 'solar', 'wind', 'nuclear', 'gas']
 energy.remove('fossil')
 # del energy[0] e.g., using the del statement
 energy.append('hydropower') # e.g., using the .append method 
-# energy.insert(0, 'hydropower') e.g., beginning of list
+# energy.insert(0, 'hydropower') e.g., beginning of list!
 # energy.insert(len(energy), 'hydropower') e.g., calculates length of the list and inserts 'hydropower' at that position / the end of list
 
 print(energy) # ['solar', 'wind', 'nuclear', 'gas', 'hydropower']
+
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+print(list(alphabet)) # prints each individual string in a list 
+# print(alphabet.split()) e.g., would return the whole string again because 
+
+
+scores = [96, 47, 113, 89, 100, 102]
+
+count = 0
+
+for score in scores:
+  if score >= 100:
+    count += 1 
+
+print(count) # 3 
+
+high_scores = [score for score in scores if score >= 100] # list comphrehension [expression for item in iterable if condition]
+print(len(high_scores)) # 3 
+
+vocabulary = [
+    ['happy', 'cheerful', 'merry', 'glad'],
+    ['tired', 'sleepy', 'fatigued', 'drained'],
+    ['excited', 'eager', 'enthused', 'animated'],
+]
+
+for synonyms in vocabulary: # iterates over each "row" (inner list) in the words list
+    for word in synonyms: # iterates over each word in current "row"
+      print(word) # prints each word on a new line
+
+list1 = [2, 6, 4]
+list2 = [2, 6, 4]
+
+print(list1 == list2) # True. Same values, same order. The comparison ( == ) is based on the values not their memory location. 
+print(list1 is list2) # False. list1 and list2 are two distinct objects in memory.
+
+
+some_value1 = [0, 1, 0, 0, 1]
+some_value2 = 'I leave you my Kingdom, take good care of it.'
+
+print(isinstance(some_value1, list)) # True. The isinstance function checks whether the first argument references an instance of the type given by second argument.
+print(isinstance(some_value2, list)) # False
+
+element = 'Nashville'
+
+destinations = ['Prague', 'London', 'Sydney', 'Belfast',
+                'Rome', 'Aruba', 'Paris', 'Bora Bora',
+                'Barcelona', 'Rio de Janeiro', 'Marrakesh',
+                'New York City']
+
+def contains(city, destinations):
+  for city in destinations:
+    if element == city:
+      return True
+  
+  else:
+    return False
+  
+def contains(element, destinations):
+    index = 0
+    while index < len(destinations):
+        if destinations[index] == element:
+          return True
+        
+        index += 1
+
+    return False
+
+print(contains('Toyko', destinations)) # True
+print(contains('Berlin', destinations)) # False
+
+
+passcode = ['11', 'jZ5', 'hQ3f*', '8!7g3', 'p3Fs']
+print('-'.join(passcode)) # 11-jZ5-hQ3f*-8!7g3-p3Fs
+
+passcode = ['11', 'jZ5', 'hQ3f*', '8!7g3', 'p3Fs']
+joined_passcode = ''
+
+for i in range(len(passcode)): # loops through each index 'i' of the 'passcode'
+  if i > 0: # checks if current index 'i' is greater than 0
+      joined_passcode += '-' # if true then we are not at first element so appends '-' to 'joined_passcode'
+  
+  joined_passcode += passcode[i] # appends current element from 'passcode' to 'joined_passcode' list
+
+print(joined_passcode) # 11-jZ5-hQ3f*-8!7g3-p3Fs
+
+
+grocery_list = ['paprika', 'tofu', 'garlic', 'seabass', 'swiss chard', 'broccoli', 'hummus']
+checked_item = ''
+
+while grocery_list:
+    checked_item = grocery_list.pop(0)
+    print(checked_item)
+  
+print(grocery_list)
