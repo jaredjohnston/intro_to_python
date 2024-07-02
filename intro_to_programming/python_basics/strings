@@ -1,0 +1,114 @@
+my_string = "These aren't the droids you're looking for."
+
+string_length = len(my_string)
+print(string_length)
+
+
+
+my_string = "Confetti floating everywhere"
+
+all_caps_string = my_string.upper()
+print(all_caps_string)
+
+
+
+name = 'Roger'
+
+if name.casefold() == 'RoGer'.casefold():
+    print('true')
+
+else:
+    print('false')
+
+print(name.casefold() == 'RoGER'.casefold()) # True
+print(name.casefold() == 'DAVE'.casefold()) # False
+
+result = 'Match' if name.casefold() == 'RoGer'.casefold() else 'No Match Found' # using ternary expression for lols 
+print(result)
+
+
+
+my_ryhme = ''''A pirate I was meant to be! 
+Trim the sails and roam the seas!''' # triple quotes preserve line breaks
+
+my_ryhme = "A pirate I was meant to be!\nTrim the sails and roam the seas!" # using blackslashes \n to add line breaks
+
+print(my_ryhme)
+
+
+
+char_sequence = 'TXkgaG92ZXJjcmFmdCBpcyBmdWxsIG9mIGVlbHMu'
+
+print('x' in char_sequence) # True
+
+
+
+def is_empty(s):
+    return s == '' 
+
+def is_empty(s):
+    return len(s) == 0
+
+def is_empty(s):
+    return not s # empty string is falsy. Returning negation of the string using the not keyword
+
+def is_empty_or_blank(s):
+    return s.strip(' ') == ''
+
+def is_empty_or_blank(s):
+    return not s.strip(' ') # empty string is falsy so we can use not to negate to return a truthy value instead
+
+
+
+s = 'launch school tech & talk'
+
+capitalised_s = s.title()
+print(capitalised_s) # using built-in title() method
+
+def capitalised_words(string):
+    words = string.split(' ') # split string into words 
+    capitalised_words = [] # list to hold capitalised words
+
+    for word in words:
+        capitalised_words.append(word.capitalise()) # iterate over each word and capitalise it 
+    
+    return ' '.join(capitalised_words) # join the capitalised words back into a single string with space in between the words
+
+string = 'launch school tech & talk'
+result = capitalised_words(string)
+print(result) # Launch School Tech & Talk
+
+
+
+def capitalised_words(string):
+    return string.title()
+
+string = 'launch school tech & talk'
+result = capitalised_words(string)
+print(result) # Launch School Tech & Talk
+
+
+
+def starts_with(string, prefix): 
+    return string.startswith(prefix) # the str.startswith method returns True if the string with a specified prefix, otherwise False.
+
+string = 'launch school'
+prefix = 'lau'
+
+if starts_with(string, prefix):
+    print(f'The string starts with the prefix "{prefix}".')
+
+else: 
+    print(f'The string does not start with the prefix "{prefix}".')
+
+
+
+string = 'lemon, lemon, lemon'
+substring = 'lemon'
+
+def count_substrings(string, substring):
+    return string.count(substring)
+
+count_substrings(string, substring)
+
+print(f'The substring "{substring} occurs {count} times in the string.')
