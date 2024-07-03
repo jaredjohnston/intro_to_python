@@ -1,0 +1,79 @@
+first_car = {
+          'type': 'sedan', 
+          'color': 'blue', 
+          'mileage': 80_000,
+}
+
+# Example above uses str as dict keys. However, you can use other types including int, booleans, floats, and tuples (e.g., lists, sets, and other dicts are not allowed as dict key).
+# Keys must be immutable and hashable. An object is hashable if its hash value remains constant.
+# Tuples can be used as dict keys if all the elements inside the tuple are immutable and hashable (e.g., none of the tuple elements are lists)
+
+
+first_car['year'] = 2003 # adds new key-value pair to the dict. 
+
+
+del first_car['mileage'] # del statement removes item from dict. 
+
+
+print(first_car['color']) # prints blue from the first_car object.
+print(first_car['type']) # sedan
+print(first_car['year']) # 2003 
+
+
+print(len(first_car)) # 3
+
+
+student = {
+        'id': 123,
+        'grade': 'B'
+}
+
+print('name' in student) # False 
+print('grade' in student) # True
+
+
+multiple_cars = {
+              'car': {
+                  'type': 'sedan', 'color': 'blue', 'year': 2003, 'mileage': 80_000
+              }, 
+              'truck': {
+                  'type': 'pickup', 'color': 'red', 'year': 1998, 'mileage': 143_000
+              },
+}
+
+
+first_car = [
+    ['type', 'sedan'],
+    ['color', 'blue'],
+    ['year', 2003],
+    ['mileage', 143_000],
+]
+
+# Dicts and lists have different purposes and strengths. Here, the data is better suited for dicts because the values need "labels". Lists do not provide the ability to label specific values.
+# Lists are better suited for ordered collections (e.g., maintaining the specific order of elements).
+
+numbers = {
+    'high': 100,
+    'medium': 50,
+    'low': 25, 
+}
+half_numbers = []
+
+for value in numbers.values(): # dict.values method is used to iterate over the values in the numbers dict.
+    half_numbers.append(value // 2) # perform division operation then append the result to half_numbers.
+  
+print(half_numbers) # [50, 25, 12]
+
+
+numbers = {
+    'high': 100,
+    'medium': 50,
+    'low': 25, 
+}
+
+for key, value in numbers.items(): # unpacks dict into an iterable tuple (high, 100) which you can access using key, value.
+    print(f"A {key} number is: {value}")
+
+# A high number is: 100
+# A medium number is: 50
+# A low number is: 25
