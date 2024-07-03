@@ -1,0 +1,37 @@
+people = ['Jared', 'Harvey', 'Rachael']
+print(len(people)) # 3
+
+stuff = ('hello', 'world', 'bye', 'now') # tuples are immutable
+
+stuff = list(stuff) # convert tuple to list
+stuff[2] = 'goodbye' # replace 'bye' with 'goodbye'
+
+stuff = tuple(stuff) # convert list back to tuple
+print(stuff) # print tuple
+
+stuff = stuff[0:2] + ('goodbye', stuff[3]) # concatenates a slice of original tuple with a new tuple that includes 'goodbye' and 'now'.
+
+# Identify two differences between lists and tuples? Lists are mutable, tuples are immutable. Lists use [], tuples use parentheses (). Both lists and tuples are non-primitive data types, are sequences and are heterogeneous. 
+
+# Why can we treat strings as sequences? Because strings are ordered, you can access each character using an index.
+
+pi = 3.141592
+
+str_pi = str(pi)
+print(str_pi)
+
+range(7) # 0, 1, 2, 3, 4, 5, 6
+range(1, 6) # 1, 2, 3, 4, 5
+range(3, 15, 4) # 3, 7, 11 
+range(3, 8, -1) # []
+range(8, 3, -1) # 8, 7, 6, 5, 4
+
+my_list = [1, 2, 3, [4, 5, 6]]
+another_list = list(my_list)
+
+# Are the lists assigned to my_list and another_list equal? Yes
+# Are the lists assigned to my_list and another_list the same object? No
+# Are the nested lists at index 3 of my_list and another_list equal? Yes
+# Are the nested lists at index 3 of my_list and another_list the same object? Yes
+
+background = {'Alice': "USA", "Macron": "France", "Inti": "Peru", "Max": "Germany", "Yoshitaka": "Japan"}
