@@ -7,7 +7,18 @@ def find_first_nonzero_among(numbers):
 # Function invocation. TypeError: find_first_nonzero_among() takes 1 positional argument but 6 were given.
 
 # find_first_nonzero_among(1)
-# # TypeError: int object is not iterable. 
+# Function invocation. TypeError: int object is not iterable. 
 
-find_first_nonzero_among([0, 0, 1, 0, 2, 0]) # solution
-find_first_nonzero_among([1]) # solution
+find_first_nonzero_among([0, 0, 1, 0, 2, 0]) # Solution. The functional call pass numbers in a single argument (list or tuple), not as separate arguments.
+find_first_nonzero_among([1]) # solution. Function expects an iterable, not an integer.
+
+
+import random
+
+def predict_weather():
+    sunshine = random.choice([True, False]) # Replaced str 'True', 'False' to use booleans.
+
+    if sunshine:
+        print("Today's weather will be sunny!")
+    else:
+        print("Today's weather will be cloudy!")
